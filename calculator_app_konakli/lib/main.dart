@@ -117,18 +117,18 @@ class _CalculatorState extends State<Calculator>{
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 SizedBox(
-                  width: 100,
+                  width: 170,
                   height: 80,
                   child: ElevatedButton(
                     onPressed: (){
                       //fonksiyon buton.
                     },
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.fromLTRB(34, 20, 128, 20),
-                      shape: CircleBorder(),
+                      padding: EdgeInsets.only(right: 80),
+                      shape: StadiumBorder(),
                       backgroundColor: Colors.grey.shade800,
                     ),
-                    child: Text('0',
+                    child: Text("0",
                       style: TextStyle(
                         fontSize: 35,
                         color: Colors.white,
@@ -136,8 +136,11 @@ class _CalculatorState extends State<Calculator>{
                     ),
                   ),
                 ),
+                calcbutton('.', Colors.grey.shade800, Colors.white),
+                calcbutton('=', Colors.orange, Colors.white),
               ],
-            )
+            ),
+            SizedBox(height: 15,),
 
           ],
         ),
