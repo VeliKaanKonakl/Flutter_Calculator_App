@@ -47,6 +47,28 @@ class _CalculatorState extends State<Calculator>{
   ),
   );
   }
+  Widget btnBackSpace(Color btncolor,Color txtcolor){
+    return Container(
+      child: SizedBox(
+        width: 80,
+        height: 80,
+        child: ElevatedButton(
+          onPressed: (){
+            //fonksiyon buton.
+          },
+          style: ElevatedButton.styleFrom(
+            padding: EdgeInsets.only(right: 5.0),
+            shape: CircleBorder(),
+            backgroundColor: btncolor,
+          ),
+          child: Icon(Icons.backspace,
+            size: 35,
+            color: Colors.black,
+          ),
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +96,7 @@ class _CalculatorState extends State<Calculator>{
               children: [
                 //Buton Fonksiyonlari Buraya cagirilacak.
                 calcbutton('AC', Colors.grey, Colors.black),
-                calcbutton('+/-', Colors.grey, Colors.black),
+                btnBackSpace(Colors.grey, Colors.black),
                 calcbutton('%', Colors.grey, Colors.black),
                 calcbutton('/', Colors.orange, Colors.white),
               ],
